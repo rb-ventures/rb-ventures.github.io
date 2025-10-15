@@ -1,17 +1,114 @@
-  :root{--bg:#ffffff;--text:#0b0b0b;--muted:#6b7280;--accent:#15c3b8}
-      *{box-sizing:border-box}
-      html,body{height:100%;margin:0;font-family:Inter, system-ui, -apple-system, 'Helvetica Neue', Arial;background:var(--bg);color:var(--text)}
-  .wrap{max-width:880px;margin:0 auto;padding:0 20px;text-align:center}
-  .hero{min-height:calc(30vh);display:flex;flex-direction:column;justify-content:center;align-items:center;padding:28px 16px;border-radius:12px;background:#f6f7f8;box-shadow:0 6px 18px rgba(12,14,18,0.04);margin:12px 0}
-  .logo{width:100%;max-width:clamp(160px,55vw,480px);height:auto;margin:0 auto 20px;display:block;filter:drop-shadow(0 6px 18px rgba(21,195,184,0.08))}
-  h1{margin:0;font-weight:700;font-size:2.2rem;letter-spacing:-0.01em;color:var(--text)}
-  p.lead{margin:18px 0 22px;color:var(--text);max-width:56ch;margin-left:auto;margin-right:auto;font-size:1.05rem;line-height:1.6;font-weight:600}
-  .contact{display:inline-block;margin-top:18px;padding:12px 20px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#10b8a8);color:#042224;text-decoration:none;font-weight:700;box-shadow:0 8px 26px rgba(21,195,184,0.12);transition:transform .18s ease,box-shadow .18s ease,filter .18s ease}
-  .contact:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 20px 46px rgba(21,195,184,0.18);filter:brightness(1.03)}
-  .contact:focus{outline:3px solid rgba(21,195,184,0.18);outline-offset:4px}
-      footer{margin-top:48px;color:var(--muted);font-size:0.9rem;display:flex;justify-content:center;gap:12px;align-items:center;flex-wrap:wrap}
-      a,a:visited{color:inherit}
-  #privacy, #terms{font-size:0.9rem;color:var(--muted);line-height:1.5}
-  #privacy h2,#terms h2{font-size:1.05rem;margin-top:0}
-  #privacy p,#terms p{margin-top:0.6rem;margin-bottom:0.6rem}
-  @media(min-width:720px){.hero{padding:56px 36px 40px}}
+:root {
+  --bg: #ffffff;
+  --text: #0b0b0b;
+  --muted: #6b7280;
+  --accent: #15c3b8;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, 'Helvetica Neue', Arial;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.wrap {
+  max-width: 880px;
+  margin: 0 auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.hero {
+  min-height: calc(30vh);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 28px 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(12,14,18,0.04);
+  margin: 12px 0;
+}
+
+.logo {
+  width: 100%;
+  max-width: clamp(160px, 55vw, 480px);
+  height: auto;
+  margin: 0 auto 20px;
+  display: block;
+}
+
+h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: -0.01em;
+  color: var(--text);
+}
+
+p.lead {
+  margin: 18px 0 22px;
+  color: var(--text);
+  max-width: 56ch;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+/* contact uses the inverted button style (dark bg, light text) */
+.contact {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  background: #042224;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 700;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.22);
+  transition: transform .18s ease, box-shadow .18s ease, filter .18s ease;
+}
+
+.contact:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.28);
+  filter: brightness(1.08);
+}
+
+.contact:focus {
+  outline: 3px solid rgba(21,195,184,0.28);
+  outline-offset: 4px;
+}
+
+footer {
+  margin-top: 48px;
+  color: var(--muted);
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+a, a:visited { color: inherit; }
+
+#privacy, #terms {
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+#privacy h2, #terms h2 { font-size: 1.05rem; margin-top: 0; }
+
+#privacy p, #terms p { margin-top: 0.6rem; margin-bottom: 0.6rem; }
+
+@media (min-width: 720px) {
+  .hero { padding: 56px 36px 40px; }
+}
